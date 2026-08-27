@@ -104,28 +104,63 @@ False positives are particularly important in payment-risk systems because incor
 - Lost conversion/revenue
 - Potentially blocked legitimate transactions
 
-On the held-out synthetic test set:
+### Rate (measured, held-out synthetic test set)
 
 - False Positives (FP): 2
-- True Negatives (TN): 1721
-- False Positive Rate (FPR): ~0.116%
+- True Negatives (TN): 1,736
+- False Positive Rate (FPR): ~0.115%
 
-The system therefore uses a tiered decision strategy rather than automatically blocking every suspicious transaction:
+### Translating rate into cost (estimated, assumptions stated)
+
+A rate alone doesn't say what a false positive actually *costs*. Using
+stated assumptions — not measured production data — here is a rough
+translation:
+
+| Assumption | Value |
+| --- | ---: |
+| Avg. transaction value | ₹2,500 |
+| Manual review cost (analyst time) | ₹40 per reviewed transaction |
+| Estimated churn/friction cost per false positive | ₹15 |
+| Estimated loss per missed fraud (false negative) | ₹2,500 (full txn value) |
+
+At the current operating threshold, on the 2,001-transaction held-out set:
+
+| Cost component | Count | Estimated cost |
+| --- | ---: | ---: |
+| Manual review (TP + FP = 260 + 2 = 262 reviewed) | 262 | ₹10,480 |
+| Churn/friction from false positives | 2 | ₹30 |
+| Missed-fraud loss from false negatives | 3 | ₹7,500 |
+| **Total estimated cost** | | **₹18,010** |
+
+**These are illustrative estimates built on stated assumptions, not
+measured production costs.** They exist to show the *shape* of the
+tradeoff — see `ml-service/training/threshold_analysis.py`, which sweeps
+decision thresholds and recomputes this cost at each one, so the
+threshold can be chosen to minimize total estimated cost rather than
+just maximize F1.
+
+### Why a single operating point isn't the full picture
+
+Precision/recall/FPR at one threshold reflects one specific tradeoff
+between catching fraud and annoying legitimate customers. Sweeping
+thresholds (see `threshold_analysis.py` / `pr_threshold_curve.png`)
+shows how estimated cost changes as the cutoff moves — letting the
+LOW/MEDIUM/HIGH boundaries be chosen deliberately rather than inherited
+from a default classifier threshold.
+
+The system uses a tiered decision strategy rather than automatically
+blocking every suspicious transaction:
 
 - LOW → APPROVE
 - MEDIUM → MANUAL REVIEW
 - HIGH → MANUAL REVIEW / BLOCK
 
-This allows the system to balance fraud detection with the cost of incorrectly flagging legitimate customers.
+This allows the system to balance fraud detection with the cost of
+incorrectly flagging legitimate customers.
 
-Because the current evaluation uses synthetic data, these results should not be interpreted as an estimate of production financial loss or real-world false-positive cost.
-
-### Application layers
-
-- **Frontend:** React 18, Vite, Tailwind CSS, React Router, Recharts, and Lucide React.
-- **Backend:** Node.js and Express. It coordinates transactions, ML requests, investigations, analytics, decisions, and audit logs.
-- **ML service:** Python FastAPI serving the serialized model and evaluation metrics.
-- **Storage:** MongoDB through Mongoose, with a JSON-backed fallback store at `backend/data/store/`.
+Because the current evaluation uses synthetic data, none of the above —
+rate or cost — should be interpreted as an estimate of real-world
+financial impact. See "Synthetic Data & Why Metrics Look Strong" above.
 
 ## Machine-Learning Risk Engine
 
