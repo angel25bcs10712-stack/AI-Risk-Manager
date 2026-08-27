@@ -1,0 +1,1050 @@
+[
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-7972",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T16:17:37.990Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-7216",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T16:17:37.231Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-7156",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T16:17:37.164Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-8869",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T16:17:28.881Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-8811",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T16:17:28.820Z"
+  },
+  {
+    "transactionId": "AUDIT-FAILED-AUTH-01",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "APPROVED",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 29/100 (LOW RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 29,
+      "riskLevel": "LOW",
+      "recommendation": "APPROVE"
+    },
+    "timestamp": "2026-08-27T16:17:18.880Z"
+  },
+  {
+    "transactionId": "AUDIT-VELOCITY-01",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "APPROVED",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 30/100 (LOW RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 30,
+      "riskLevel": "LOW",
+      "recommendation": "APPROVE"
+    },
+    "timestamp": "2026-08-27T16:17:18.847Z"
+  },
+  {
+    "transactionId": "AUDIT-LOCATION-01",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "APPROVED",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 25/100 (LOW RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 25,
+      "riskLevel": "LOW",
+      "recommendation": "APPROVE"
+    },
+    "timestamp": "2026-08-27T16:17:18.815Z"
+  },
+  {
+    "transactionId": "AUDIT-NEWDEVICE-01",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "APPROVED",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 27/100 (LOW RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 27,
+      "riskLevel": "LOW",
+      "recommendation": "APPROVE"
+    },
+    "timestamp": "2026-08-27T16:17:18.787Z"
+  },
+  {
+    "transactionId": "AUDIT-HIGHVALUE-01",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 50/100 (MEDIUM RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 50,
+      "riskLevel": "MEDIUM",
+      "recommendation": "MANUAL REVIEW"
+    },
+    "timestamp": "2026-08-27T16:17:18.751Z"
+  },
+  {
+    "transactionId": "AUDIT-NORMAL-01",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "APPROVED",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 5/100 (LOW RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 5,
+      "riskLevel": "LOW",
+      "recommendation": "APPROVE"
+    },
+    "timestamp": "2026-08-27T16:17:18.708Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-7075",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T16:16:37.089Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-2665",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T16:16:32.678Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-2624",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T16:16:32.637Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-2083",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T15:54:52.090Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-1923",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T15:54:51.962Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-0557",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T15:30:50.567Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-0524",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T15:30:50.536Z"
+  },
+  {
+    "transactionId": "TXN-9823-3305",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "APPROVED",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 30/100 (LOW RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 30,
+      "riskLevel": "LOW",
+      "recommendation": "APPROVE"
+    },
+    "timestamp": "2026-08-27T15:18:38.167Z"
+  },
+  {
+    "transactionId": "TXN-8091-9950",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9950-8874",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T14:50:58.878Z"
+  },
+  {
+    "transactionId": "TXN-1134-3093",
+    "previousStatus": "BLOCKED",
+    "newStatus": "UNDER_REVIEW",
+    "action": "MANUAL_REVIEW",
+    "reason": "Test: MANUAL_REVIEW",
+    "actor": "Test Suite",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 45
+    },
+    "timestamp": "2026-08-27T14:50:58.849Z"
+  },
+  {
+    "transactionId": "TXN-1134-3093",
+    "previousStatus": "APPROVED",
+    "newStatus": "BLOCKED",
+    "action": "BLOCK",
+    "reason": "Test: BLOCK",
+    "actor": "Test Suite",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 45
+    },
+    "timestamp": "2026-08-27T14:50:58.839Z"
+  },
+  {
+    "transactionId": "TXN-1134-3093",
+    "previousStatus": "APPROVED",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Test: APPROVE",
+    "actor": "Test Suite",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 45
+    },
+    "timestamp": "2026-08-27T14:50:58.828Z"
+  },
+  {
+    "transactionId": "TXN-5149-5807",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "RE_ANALYZE",
+    "reason": "Manual re-analysis requested by Risk Analyst.",
+    "actor": "Risk Analyst",
+    "metadata": {
+      "updatedScore": 100,
+      "updatedLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T14:50:58.815Z"
+  },
+  {
+    "transactionId": "TXN-5149-5807",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 100/100 (HIGH RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "recommendation": "BLOCK"
+    },
+    "timestamp": "2026-08-27T14:50:58.791Z"
+  },
+  {
+    "transactionId": "TXN-8811-5142",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 100/100 (HIGH RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "recommendation": "BLOCK"
+    },
+    "timestamp": "2026-08-27T14:50:58.768Z"
+  },
+  {
+    "transactionId": "TXN-2638-6202",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 89/100 (HIGH RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 89,
+      "riskLevel": "HIGH",
+      "recommendation": "BLOCK"
+    },
+    "timestamp": "2026-08-27T14:50:58.746Z"
+  },
+  {
+    "transactionId": "TXN-4827-2771",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 100/100 (HIGH RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "recommendation": "BLOCK"
+    },
+    "timestamp": "2026-08-27T14:50:58.723Z"
+  },
+  {
+    "transactionId": "TXN-3544-9880",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 59/100 (MEDIUM RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 59,
+      "riskLevel": "MEDIUM",
+      "recommendation": "MANUAL REVIEW"
+    },
+    "timestamp": "2026-08-27T14:50:58.693Z"
+  },
+  {
+    "transactionId": "TXN-1134-3093",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "APPROVED",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 0/100 (LOW RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "recommendation": "APPROVE"
+    },
+    "timestamp": "2026-08-27T14:50:58.666Z"
+  },
+  {
+    "transactionId": "TXN-8091-9950",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9950-4501",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T14:42:14.508Z"
+  },
+  {
+    "transactionId": "TXN-8222-1736",
+    "previousStatus": "BLOCKED",
+    "newStatus": "UNDER_REVIEW",
+    "action": "MANUAL_REVIEW",
+    "reason": "Test: MANUAL_REVIEW",
+    "actor": "Test Suite",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 45
+    },
+    "timestamp": "2026-08-27T14:42:14.466Z"
+  },
+  {
+    "transactionId": "TXN-8222-1736",
+    "previousStatus": "APPROVED",
+    "newStatus": "BLOCKED",
+    "action": "BLOCK",
+    "reason": "Test: BLOCK",
+    "actor": "Test Suite",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 45
+    },
+    "timestamp": "2026-08-27T14:42:14.446Z"
+  },
+  {
+    "transactionId": "TXN-8222-1736",
+    "previousStatus": "APPROVED",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Test: APPROVE",
+    "actor": "Test Suite",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 45
+    },
+    "timestamp": "2026-08-27T14:42:14.427Z"
+  },
+  {
+    "transactionId": "TXN-7627-8482",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "RE_ANALYZE",
+    "reason": "Manual re-analysis requested by Risk Analyst.",
+    "actor": "Risk Analyst",
+    "metadata": {
+      "updatedScore": 100,
+      "updatedLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T14:42:14.411Z"
+  },
+  {
+    "transactionId": "TXN-7627-8482",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 100/100 (HIGH RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "recommendation": "BLOCK"
+    },
+    "timestamp": "2026-08-27T14:42:14.371Z"
+  },
+  {
+    "transactionId": "TXN-9509-2091",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 100/100 (HIGH RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "recommendation": "BLOCK"
+    },
+    "timestamp": "2026-08-27T14:42:14.332Z"
+  },
+  {
+    "transactionId": "TXN-7670-9385",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 89/100 (HIGH RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 89,
+      "riskLevel": "HIGH",
+      "recommendation": "BLOCK"
+    },
+    "timestamp": "2026-08-27T14:42:14.282Z"
+  },
+  {
+    "transactionId": "TXN-6489-1698",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 100/100 (HIGH RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "recommendation": "BLOCK"
+    },
+    "timestamp": "2026-08-27T14:42:14.233Z"
+  },
+  {
+    "transactionId": "TXN-9667-2988",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 59/100 (MEDIUM RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 59,
+      "riskLevel": "MEDIUM",
+      "recommendation": "MANUAL REVIEW"
+    },
+    "timestamp": "2026-08-27T14:42:14.186Z"
+  },
+  {
+    "transactionId": "TXN-8222-1736",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "APPROVED",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 0/100 (LOW RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "recommendation": "APPROVE"
+    },
+    "timestamp": "2026-08-27T14:42:14.139Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-9596",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T14:36:09.605Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
+      "caseId": "CASE-TXN-8091-9921-9275",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T14:36:09.300Z"
+  },
+  {
+    "transactionId": "TXN-7681-3722",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 100/100 (HIGH RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "recommendation": "BLOCK"
+    },
+    "timestamp": "2026-08-27T14:31:25.183Z"
+  },
+  {
+    "transactionId": "TXN-8992-1240",
+    "previousStatus": "NEW_SUBMISSION",
+    "newStatus": "UNDER_REVIEW",
+    "action": "CREATE",
+    "reason": "Automated ML Risk Scoring: 100/100 (HIGH RISK).",
+    "actor": "RiskGuard Risk Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "recommendation": "BLOCK"
+    },
+    "timestamp": "2026-08-27T14:18:15.569Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "PENDING",
+    "newStatus": "UNDER_REVIEW",
+    "action": "MANUAL_REVIEW",
+    "reason": "Transaction amount ($4,850.00) is significantly anomalous — 26.9x higher than the customer's typical average ($180.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 4850
+    },
+    "timestamp": "2026-08-27T12:15:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9922",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 45.2
+    },
+    "timestamp": "2026-08-27T12:30:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9923",
+    "previousStatus": "PENDING",
+    "newStatus": "BLOCKED",
+    "action": "BLOCK",
+    "reason": "Transaction amount ($3,200.00) is significantly anomalous — 33.7x higher than the customer's typical average ($95.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 3200
+    },
+    "timestamp": "2026-08-27T13:00:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9924",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction amount ($340.00) is substantially above the historical average ($110.00) [3.1x deviation].",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 95,
+      "riskLevel": "HIGH",
+      "amount": 340
+    },
+    "timestamp": "2026-08-27T13:15:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9925",
+    "previousStatus": "PENDING",
+    "newStatus": "UNDER_REVIEW",
+    "action": "MANUAL_REVIEW",
+    "reason": "Transaction amount ($890.00) is substantially above the historical average ($280.00) [3.2x deviation].",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 890
+    },
+    "timestamp": "2026-08-27T13:45:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9926",
+    "previousStatus": "PENDING",
+    "newStatus": "BLOCKED",
+    "action": "BLOCK",
+    "reason": "Transaction amount ($2,500.00) is significantly anomalous — 41.7x higher than the customer's typical average ($60.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 2500
+    },
+    "timestamp": "2026-08-27T14:10:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9927",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 12.99
+    },
+    "timestamp": "2026-08-27T14:20:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9928",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction amount ($620.00) represents a noticeable 2x elevation over usual spending ($240.00).",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 620
+    },
+    "timestamp": "2026-08-27T14:40:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9929",
+    "previousStatus": "PENDING",
+    "newStatus": "UNDER_REVIEW",
+    "action": "MANUAL_REVIEW",
+    "reason": "Transaction amount ($5,400.00) is significantly anomalous — 25.7x higher than the customer's typical average ($210.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 5400
+    },
+    "timestamp": "2026-08-27T15:00:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9930",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 88.5
+    },
+    "timestamp": "2026-08-27T15:15:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9931",
+    "previousStatus": "PENDING",
+    "newStatus": "BLOCKED",
+    "action": "BLOCK",
+    "reason": "Transaction amount ($1,850.00) is significantly anomalous — 46.2x higher than the customer's typical average ($40.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 1850
+    },
+    "timestamp": "2026-08-27T15:30:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9932",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 145
+    },
+    "timestamp": "2026-08-27T15:50:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9933",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction amount ($1,200.00) represents a noticeable 2x elevation over usual spending ($450.00).",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 1200
+    },
+    "timestamp": "2026-08-27T16:00:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9934",
+    "previousStatus": "PENDING",
+    "newStatus": "BLOCKED",
+    "action": "BLOCK",
+    "reason": "Transaction amount ($3,890.00) is significantly anomalous — 25.9x higher than the customer's typical average ($150.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 3890
+    },
+    "timestamp": "2026-08-27T16:20:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9935",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 67.8
+    },
+    "timestamp": "2026-08-27T16:35:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9936",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Aggregated subtle risk indicators slightly elevated across multiple feature dimensions.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 470
+    },
+    "timestamp": "2026-08-27T16:50:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9937",
+    "previousStatus": "PENDING",
+    "newStatus": "UNDER_REVIEW",
+    "action": "MANUAL_REVIEW",
+    "reason": "Transaction amount ($2,950.00) is significantly anomalous — 9.2x higher than the customer's typical average ($320.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 2950
+    },
+    "timestamp": "2026-08-27T17:10:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9938",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 54
+    },
+    "timestamp": "2026-08-27T17:25:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9939",
+    "previousStatus": "PENDING",
+    "newStatus": "UNDER_REVIEW",
+    "action": "MANUAL_REVIEW",
+    "reason": "Transaction amount ($1,600.00) is substantially above the historical average ($350.00) [4.6x deviation].",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 1600
+    },
+    "timestamp": "2026-08-27T17:40:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9940",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 19.99
+    },
+    "timestamp": "2026-08-27T18:00:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9941",
+    "previousStatus": "PENDING",
+    "newStatus": "BLOCKED",
+    "action": "BLOCK",
+    "reason": "Transaction amount ($6,200.00) is significantly anomalous — 15.5x higher than the customer's typical average ($400.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 6200
+    },
+    "timestamp": "2026-08-27T18:15:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9942",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 210
+    },
+    "timestamp": "2026-08-27T18:30:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9943",
+    "previousStatus": "PENDING",
+    "newStatus": "UNDER_REVIEW",
+    "action": "MANUAL_REVIEW",
+    "reason": "Transaction amount ($950.00) is significantly anomalous — 7.9x higher than the customer's typical average ($120.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 950
+    },
+    "timestamp": "2026-08-27T18:45:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9944",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 34.5
+    },
+    "timestamp": "2026-08-27T19:00:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9945",
+    "previousStatus": "PENDING",
+    "newStatus": "BLOCKED",
+    "action": "BLOCK",
+    "reason": "Transaction amount ($7,500.00) is significantly anomalous — 68.2x higher than the customer's typical average ($110.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 7500
+    },
+    "timestamp": "2026-08-27T19:15:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9946",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 115
+    },
+    "timestamp": "2026-08-27T19:25:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9947",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Geographic anomaly detected: Transaction originated from an unusual location differing from customer's primary region.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 420
+    },
+    "timestamp": "2026-08-27T19:30:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9948",
+    "previousStatus": "PENDING",
+    "newStatus": "BLOCKED",
+    "action": "BLOCK",
+    "reason": "Transaction amount ($2,800.00) is significantly anomalous — 35.0x higher than the customer's typical average ($80.00).",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 2800
+    },
+    "timestamp": "2026-08-27T19:35:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9949",
+    "previousStatus": "PENDING",
+    "newStatus": "APPROVED",
+    "action": "APPROVE",
+    "reason": "Transaction characteristics align with established customer behavioral profile.",
+    "actor": "RiskGuard Auto-Rule Engine",
+    "metadata": {
+      "riskScore": 0,
+      "riskLevel": "LOW",
+      "amount": 89
+    },
+    "timestamp": "2026-08-27T19:40:00.000Z"
+  },
+  {
+    "transactionId": "TXN-8091-9950",
+    "previousStatus": "PENDING",
+    "newStatus": "UNDER_REVIEW",
+    "action": "MANUAL_REVIEW",
+    "reason": "Transaction amount ($1,450.00) is substantially above the historical average ($250.00) [5.8x deviation].",
+    "actor": "AI Risk Orchestrator",
+    "metadata": {
+      "riskScore": 100,
+      "riskLevel": "HIGH",
+      "amount": 1450
+    },
+    "timestamp": "2026-08-27T19:45:00.000Z"
+  }
+]
