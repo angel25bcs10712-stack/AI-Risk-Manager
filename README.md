@@ -142,6 +142,24 @@ Confusion matrix on the held-out test set:
 
 These results are benchmark results on synthetic data, not evidence of performance on real payment traffic.
 
+### False-Positive Cost
+
+False positives matter in payment-risk systems because incorrectly flagging a legitimate transaction can cause unnecessary manual review, customer friction, delayed payments, lost conversion or revenue, and potentially blocked legitimate transactions.
+
+On the held-out synthetic test set:
+
+- False positives (FP): 2
+- True negatives (TN): 1,736
+- False positive rate (FPR): approximately 0.115%
+
+The system uses a tiered decision strategy rather than automatically blocking every suspicious transaction:
+
+- LOW -> APPROVE
+- MEDIUM -> MANUAL REVIEW
+- HIGH -> MANUAL REVIEW or BLOCK
+
+This balances fraud detection with the cost of incorrectly flagging legitimate customers. Because the current evaluation uses synthetic data, these results should not be interpreted as an estimate of production financial loss or real-world false-positive cost.
+
 ## AI Investigation Workflow
 
 The backend orchestrator runs six investigative tools:
