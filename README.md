@@ -94,6 +94,31 @@ flowchart TD
     C --> N[(MongoDB)]
     C --> O[In-Memory / File Fallback Store]
 ```
+## 💰 False-Positive Cost
+
+False positives are particularly important in payment-risk systems because incorrectly flagging a legitimate transaction can result in:
+
+- Unnecessary manual review
+- Customer friction
+- Delayed payments
+- Lost conversion/revenue
+- Potentially blocked legitimate transactions
+
+On the held-out synthetic test set:
+
+- False Positives (FP): 2
+- True Negatives (TN): 1721
+- False Positive Rate (FPR): ~0.116%
+
+The system therefore uses a tiered decision strategy rather than automatically blocking every suspicious transaction:
+
+- LOW → APPROVE
+- MEDIUM → MANUAL REVIEW
+- HIGH → MANUAL REVIEW / BLOCK
+
+This allows the system to balance fraud detection with the cost of incorrectly flagging legitimate customers.
+
+Because the current evaluation uses synthetic data, these results should not be interpreted as an estimate of production financial loss or real-world false-positive cost.
 
 ### Application layers
 
