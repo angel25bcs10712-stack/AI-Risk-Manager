@@ -287,7 +287,7 @@ The backend can run without MongoDB or the ML service by activating its document
 - The benchmark dataset is synthetic and does not represent real-world fraud patterns or production traffic.
 - The fallback store is intended for local resilience and demonstration; MongoDB is the primary persistence option when configured and available.
 - The investigation workflow is a deterministic backend orchestration of configured evidence checks and model output; it is not an autonomous financial authority.
-- Reported precision/recall/ROC-AUC reflect performance on a synthetic
+  - Reported precision/recall/ROC-AUC reflect performance on a synthetic
   generator's decision boundary, which is more separable than real-world
   fraud/legitimate transaction distributions are expected to be. See
   "Synthetic Data & Why Metrics Look Strong" above.
