@@ -167,6 +167,34 @@ Confusion matrix on the held-out test set:
 
 These results are benchmark results on synthetic data, not evidence of performance on real payment traffic.
 
+### Synthetic Data & Why Metrics Look Strong
+
+The reported precision (99.3%), recall (98.9%), and ROC-AUC (0.9998) are
+notably high, and that is worth addressing directly rather than letting
+it stand unexplained.
+
+The synthetic dataset generates fraud and legitimate transactions from
+separate underlying distributions across the 11 model features (e.g.
+`amount_to_avg_ratio`, `is_new_device`, `previous_chargebacks`). Because
+the generator constructs fraud cases as statistically distinct from
+legitimate ones (rather than sampling from overlapping, ambiguous
+real-world distributions), the classes are more separable than they
+would be in production data, where fraud increasingly mimics legitimate
+behavior and legitimate customers occasionally look anomalous (new
+device, unusual location, high amount).
+
+In other words: these metrics measure how well the model learned the
+*generator's* decision boundary, not how well it would generalize to
+adversarial, evolving, real-world fraud patterns. We expect real-world
+precision/recall to be meaningfully lower than the benchmark numbers
+above, and to degrade over time as fraud patterns shift — which is why
+model-performance monitoring and periodic retraining would be required
+in any production deployment.
+
+This benchmark should be read as: "the pipeline is correctly wired
+end-to-end and the model can learn a fraud/legitimate boundary when one
+exists in the data" — not as a claim about real-world fraud-catch rate.
+
 ## AI Investigation Workflow
 
 The backend orchestrator runs six investigative tools:
@@ -259,6 +287,18 @@ The backend can run without MongoDB or the ML service by activating its document
 - The benchmark dataset is synthetic and does not represent real-world fraud patterns or production traffic.
 - The fallback store is intended for local resilience and demonstration; MongoDB is the primary persistence option when configured and available.
 - The investigation workflow is a deterministic backend orchestration of configured evidence checks and model output; it is not an autonomous financial authority.
+- Reported precision/recall/ROC-AUC reflect performance on a synthetic
+  generator's decision boundary, which is more separable than real-world
+  fraud/legitimate transaction distributions are expected to be. See
+  "Synthetic Data & Why Metrics Look Strong" above.
+- This project addresses one loss category — payment fraud risk scoring.
+  It does not implement return-risk scoring or chargeback-evidence
+  generation, despite "Risk Manager" implying broader scope. Extending
+  to those categories would require separate feature sets and labeled
+  data.
+- False-positive cost figures are illustrative estimates built on stated
+  assumptions (transaction value, review labor cost, churn proxy), not
+  measured operational costs from a live deployment.
 
 ## Docker Support
 
