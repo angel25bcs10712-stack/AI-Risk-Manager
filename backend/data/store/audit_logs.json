@@ -7,6 +7,20 @@
     "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
     "actor": "AI Risk Agent Orchestrator",
     "metadata": {
+      "caseId": "CASE-TXN-8091-9921-8998",
+      "riskScore": 100,
+      "riskLevel": "HIGH"
+    },
+    "timestamp": "2026-08-27T17:13:59.010Z"
+  },
+  {
+    "transactionId": "TXN-8091-9921",
+    "previousStatus": "UNDER_REVIEW",
+    "newStatus": "UNDER_REVIEW",
+    "action": "INVESTIGATE",
+    "reason": "AI Risk Agent investigation completed. Suggested action: BLOCK.",
+    "actor": "AI Risk Agent Orchestrator",
+    "metadata": {
       "caseId": "CASE-TXN-8091-9921-7972",
       "riskScore": 100,
       "riskLevel": "HIGH"

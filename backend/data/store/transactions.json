@@ -81,20 +81,20 @@
         }
       },
       "reviewCase": {
-        "caseId": "CASE-TXN-8091-9921-7972",
+        "caseId": "CASE-TXN-8091-9921-8998",
         "status": "OPEN_INVESTIGATION",
         "severity": "HIGH",
         "riskScore": 100,
         "summary": "Transaction amount is substantially above historical average (26.9x higher than baseline $180). Transaction initiated from a newly observed hardware device (0.5 days old). Geographic origin (Singapore, SG) deviates from customer established domicile (New York, US). Rapid transaction velocity detected (6 orders in 10 minutes). Authentication friction detected with 3 failed attempts.",
         "proposedAction": "BLOCK",
         "confidence": 0.96,
-        "timestamp": "2026-08-27T16:17:37.972Z"
+        "timestamp": "2026-08-27T17:13:58.998Z"
       },
       "timeline": [
         {
           "step": 1,
           "name": "Transaction Ingestion & Feature Normalization",
-          "timestamp": "2026-08-27T16:17:37.966Z",
+          "timestamp": "2026-08-27T17:13:58.986Z",
           "status": "COMPLETED",
           "description": "Ingested payment transaction TXN-8091-9921 for amount $4,850 at merchant 'Apple Store Fifth Ave'."
         },
@@ -102,7 +102,7 @@
           "step": 2,
           "name": "ML Risk Engine Evaluation",
           "tool": "calculateRisk",
-          "timestamp": "2026-08-27T16:17:38.086Z",
+          "timestamp": "2026-08-27T17:13:59.106Z",
           "status": "COMPLETED",
           "output": {
             "fraud_probability": 0.99,
@@ -136,7 +136,7 @@
           "step": 3,
           "name": "Customer Profile & Historical Baseline Check",
           "tool": "getCustomerHistory",
-          "timestamp": "2026-08-27T16:17:38.206Z",
+          "timestamp": "2026-08-27T17:13:59.226Z",
           "status": "COMPLETED",
           "output": {
             "customerId": "CUST-10492",
@@ -154,7 +154,7 @@
           "step": 4,
           "name": "Device Fingerprint & Hardware Integrity Analysis",
           "tool": "checkDevice",
-          "timestamp": "2026-08-27T16:17:38.326Z",
+          "timestamp": "2026-08-27T17:13:59.346Z",
           "status": "COMPLETED",
           "output": {
             "deviceId": "DEV-IPHONE-NEW-99",
@@ -170,7 +170,7 @@
           "step": 5,
           "name": "Geolocation & Travel Path Verification",
           "tool": "checkLocation",
-          "timestamp": "2026-08-27T16:17:38.446Z",
+          "timestamp": "2026-08-27T17:13:59.466Z",
           "status": "COMPLETED",
           "output": {
             "transactionLocation": "Singapore, SG",
@@ -185,7 +185,7 @@
           "step": 6,
           "name": "Velocity & Authentication Spike Analysis",
           "tool": "getTransactionHistory",
-          "timestamp": "2026-08-27T16:17:38.566Z",
+          "timestamp": "2026-08-27T17:13:59.586Z",
           "status": "COMPLETED",
           "output": {
             "customerId": "CUST-10492",
@@ -201,25 +201,25 @@
           "step": 7,
           "name": "AI Risk Assessment & Case Generation",
           "tool": "createReviewCase",
-          "timestamp": "2026-08-27T16:17:38.716Z",
+          "timestamp": "2026-08-27T17:13:59.736Z",
           "status": "COMPLETED",
           "output": {
-            "caseId": "CASE-TXN-8091-9921-7972",
+            "caseId": "CASE-TXN-8091-9921-8998",
             "status": "OPEN_INVESTIGATION",
             "severity": "HIGH",
             "riskScore": 100,
             "summary": "Transaction amount is substantially above historical average (26.9x higher than baseline $180). Transaction initiated from a newly observed hardware device (0.5 days old). Geographic origin (Singapore, SG) deviates from customer established domicile (New York, US). Rapid transaction velocity detected (6 orders in 10 minutes). Authentication friction detected with 3 failed attempts.",
             "proposedAction": "BLOCK",
             "confidence": 0.96,
-            "timestamp": "2026-08-27T16:17:37.972Z"
+            "timestamp": "2026-08-27T17:13:58.998Z"
           },
-          "description": "Synthesized risk profile: HIGH RISK (Score: 100). Recommendation: BLOCK. Case ID: CASE-TXN-8091-9921-7972."
+          "description": "Synthesized risk profile: HIGH RISK (Score: 100). Recommendation: BLOCK. Case ID: CASE-TXN-8091-9921-8998."
         }
       ],
-      "investigatedAt": "2026-08-27T16:17:37.972Z",
-      "executionDurationMs": 6
+      "investigatedAt": "2026-08-27T17:13:58.998Z",
+      "executionDurationMs": 12
     },
-    "updatedAt": "2026-08-27T16:17:37.972Z"
+    "updatedAt": "2026-08-27T17:13:58.998Z"
   },
   {
     "transactionId": "TXN-8091-9922",
