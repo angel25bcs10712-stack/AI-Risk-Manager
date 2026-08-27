@@ -94,13 +94,73 @@ flowchart TD
     C --> N[(MongoDB)]
     C --> O[In-Memory / File Fallback Store]
 ```
+## 💰 False-Positive Cost
 
-### Application layers
+False positives are particularly important in payment-risk systems because incorrectly flagging a legitimate transaction can result in:
 
-- **Frontend:** React 18, Vite, Tailwind CSS, React Router, Recharts, and Lucide React.
-- **Backend:** Node.js and Express. It coordinates transactions, ML requests, investigations, analytics, decisions, and audit logs.
-- **ML service:** Python FastAPI serving the serialized model and evaluation metrics.
-- **Storage:** MongoDB through Mongoose, with a JSON-backed fallback store at `backend/data/store/`.
+- Unnecessary manual review
+- Customer friction
+- Delayed payments
+- Lost conversion/revenue
+- Potentially blocked legitimate transactions
+
+### Rate (measured, held-out synthetic test set)
+
+- False Positives (FP): 2
+- True Negatives (TN): 1,736
+- False Positive Rate (FPR): ~0.115%
+
+### Translating rate into cost (estimated, assumptions stated)
+
+A rate alone doesn't say what a false positive actually *costs*. Using
+stated assumptions — not measured production data — here is a rough
+translation:
+
+| Assumption | Value |
+| --- | ---: |
+| Avg. transaction value | ₹2,500 |
+| Manual review cost (analyst time) | ₹40 per reviewed transaction |
+| Estimated churn/friction cost per false positive | ₹15 |
+| Estimated loss per missed fraud (false negative) | ₹2,500 (full txn value) |
+
+At the current operating threshold, on the 2,001-transaction held-out set:
+
+| Cost component | Count | Estimated cost |
+| --- | ---: | ---: |
+| Manual review (TP + FP = 260 + 2 = 262 reviewed) | 262 | ₹10,480 |
+| Churn/friction from false positives | 2 | ₹30 |
+| Missed-fraud loss from false negatives | 3 | ₹7,500 |
+| **Total estimated cost** | | **₹18,010** |
+
+**These are illustrative estimates built on stated assumptions, not
+measured production costs.** They exist to show the *shape* of the
+tradeoff — see `ml-service/training/threshold_analysis.py`, which sweeps
+decision thresholds and recomputes this cost at each one, so the
+threshold can be chosen to minimize total estimated cost rather than
+just maximize F1.
+
+### Why a single operating point isn't the full picture
+
+Precision/recall/FPR at one threshold reflects one specific tradeoff
+between catching fraud and annoying legitimate customers. Sweeping
+thresholds (see `threshold_analysis.py` / `pr_threshold_curve.png`)
+shows how estimated cost changes as the cutoff moves — letting the
+LOW/MEDIUM/HIGH boundaries be chosen deliberately rather than inherited
+from a default classifier threshold.
+
+The system uses a tiered decision strategy rather than automatically
+blocking every suspicious transaction:
+
+- LOW → APPROVE
+- MEDIUM → MANUAL REVIEW
+- HIGH → MANUAL REVIEW / BLOCK
+
+This allows the system to balance fraud detection with the cost of
+incorrectly flagging legitimate customers.
+
+Because the current evaluation uses synthetic data, none of the above —
+rate or cost — should be interpreted as an estimate of real-world
+financial impact. See "Synthetic Data & Why Metrics Look Strong" above.
 
 ## Machine-Learning Risk Engine
 
@@ -170,6 +230,34 @@ python training/threshold_analysis.py
 ![Precision, recall, and false-positive rate by decision threshold](ml-service/model/saved/pr_threshold_curve.png)
 
 At the model's default 0.50 threshold, the generated analysis reports precision `0.9928`, recall `0.9892`, false-positive rate `0.0012`, FP `2`, TN `1,721`, FN `3`, and TP `275`.
+
+### Synthetic Data & Why Metrics Look Strong
+
+The reported precision (99.3%), recall (98.9%), and ROC-AUC (0.9998) are
+notably high, and that is worth addressing directly rather than letting
+it stand unexplained.
+
+The synthetic dataset generates fraud and legitimate transactions from
+separate underlying distributions across the 11 model features (e.g.
+`amount_to_avg_ratio`, `is_new_device`, `previous_chargebacks`). Because
+the generator constructs fraud cases as statistically distinct from
+legitimate ones (rather than sampling from overlapping, ambiguous
+real-world distributions), the classes are more separable than they
+would be in production data, where fraud increasingly mimics legitimate
+behavior and legitimate customers occasionally look anomalous (new
+device, unusual location, high amount).
+
+In other words: these metrics measure how well the model learned the
+*generator's* decision boundary, not how well it would generalize to
+adversarial, evolving, real-world fraud patterns. We expect real-world
+precision/recall to be meaningfully lower than the benchmark numbers
+above, and to degrade over time as fraud patterns shift — which is why
+model-performance monitoring and periodic retraining would be required
+in any production deployment.
+
+This benchmark should be read as: "the pipeline is correctly wired
+end-to-end and the model can learn a fraud/legitimate boundary when one
+exists in the data" — not as a claim about real-world fraud-catch rate.
 
 ## AI Investigation Workflow
 
@@ -290,6 +378,18 @@ The backend can run without MongoDB or the ML service by activating its document
 - The benchmark dataset is synthetic, with a 13.89% fraud rate in the held-out split, and does not represent real-world fraud patterns or production traffic.
 - The fallback store is intended for local resilience and demonstration; MongoDB is the primary persistence option when configured and available.
 - The investigation workflow is a deterministic backend orchestration of configured evidence checks and model output; it is not an autonomous financial authority.
+  - Reported precision/recall/ROC-AUC reflect performance on a synthetic
+  generator's decision boundary, which is more separable than real-world
+  fraud/legitimate transaction distributions are expected to be. See
+  "Synthetic Data & Why Metrics Look Strong" above.
+- This project addresses one loss category — payment fraud risk scoring.
+  It does not implement return-risk scoring or chargeback-evidence
+  generation, despite "Risk Manager" implying broader scope. Extending
+  to those categories would require separate feature sets and labeled
+  data.
+- False-positive cost figures are illustrative estimates built on stated
+  assumptions (transaction value, review labor cost, churn proxy), not
+  measured operational costs from a live deployment.
 
 ## Docker Support
 
