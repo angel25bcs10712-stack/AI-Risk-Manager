@@ -128,17 +128,17 @@ The stored benchmark metrics are:
 
 | Metric | Result |
 | --- | ---: |
-| Precision | 99.3% |
-| Recall | 98.9% |
+| Precision | 99.28% |
+| Recall | 98.92% |
 | F1 score | 99.1% |
-| ROC-AUC | 0.9998 |
+| ROC-AUC | 0.9999 |
 
 Confusion matrix on the held-out test set:
 
 | | Predicted legitimate | Predicted fraud |
 | --- | ---: | ---: |
-| Actual legitimate | TN: 1,736 | FP: 2 |
-| Actual fraud | FN: 3 | TP: 260 |
+| Actual legitimate | TN: 1,721 | FP: 2 |
+| Actual fraud | FN: 3 | TP: 275 |
 
 These results are benchmark results on synthetic data, not evidence of performance on real payment traffic.
 
@@ -149,8 +149,8 @@ False positives matter in payment-risk systems because incorrectly flagging a le
 On the held-out synthetic test set:
 
 - False positives (FP): 2
-- True negatives (TN): 1,736
-- False positive rate (FPR): approximately 0.115%
+- True negatives (TN): 1,721
+- False positive rate (FPR): approximately 0.12%
 
 The system uses a tiered decision strategy rather than automatically blocking every suspicious transaction:
 
@@ -159,6 +159,17 @@ The system uses a tiered decision strategy rather than automatically blocking ev
 - HIGH -> MANUAL REVIEW or BLOCK
 
 This balances fraud detection with the cost of incorrectly flagging legitimate customers. Because the current evaluation uses synthetic data, these results should not be interpreted as an estimate of production financial loss or real-world false-positive cost.
+
+The threshold-analysis utility sweeps fraud-probability thresholds from 0.05 to 0.95 using the same saved model and held-out test split. It writes the measured values to `ml-service/model/saved/threshold_analysis.csv` and generates the chart below. Run it with:
+
+```bash
+cd ml-service
+python training/threshold_analysis.py
+```
+
+![Precision, recall, and false-positive rate by decision threshold](ml-service/model/saved/pr_threshold_curve.png)
+
+At the model's default 0.50 threshold, the generated analysis reports precision `0.9928`, recall `0.9892`, false-positive rate `0.0012`, FP `2`, TN `1,721`, FN `3`, and TP `275`.
 
 ## AI Investigation Workflow
 
@@ -172,6 +183,33 @@ The backend orchestrator runs six investigative tools:
 6. `createReviewCase` - synthesized findings, recommendation, confidence, and case ID.
 
 The UI presents these operations as a seven-step timeline: ingestion, ML evaluation, customer profile, device analysis, geolocation verification, velocity/authentication analysis, and case generation.
+
+Example response from `POST /api/agent/investigate` for `TXN-8091-9921`:
+
+```json
+{
+    "transactionId": "TXN-8091-9921",
+    "riskScore": 100,
+    "fraudProbability": 0.99,
+    "riskLevel": "HIGH",
+    "recommendation": "BLOCK",
+    "riskFactors": [
+        "Transaction amount ($4,850) is 26.9x higher than customer typical average ($180).",
+        "Brand new device fingerprint detected (first observed 0.5 days ago; potential account takeover).",
+        "Geographic anomaly detected: Transaction originated from an unusual location differing from customer's primary region.",
+        "Severe velocity spike: 6 transactions initiated in the last 10 minutes.",
+        "High authentication failure rate: 3 failed PIN/CVV attempts recorded prior to this transaction.",
+        "Historical chargeback flagged on this customer profile."
+    ],
+    "reviewCase": {
+        "status": "OPEN_INVESTIGATION",
+        "severity": "HIGH",
+        "proposedAction": "BLOCK",
+        "confidence": 0.96
+    },
+    "timeline": "7 completed steps"
+}
+```
 
 ## Resilience and Security
 
@@ -249,7 +287,7 @@ The backend can run without MongoDB or the ML service by activating its document
 
 ## Limitations
 
-- The benchmark dataset is synthetic and does not represent real-world fraud patterns or production traffic.
+- The benchmark dataset is synthetic, with a 13.89% fraud rate in the held-out split, and does not represent real-world fraud patterns or production traffic.
 - The fallback store is intended for local resilience and demonstration; MongoDB is the primary persistence option when configured and available.
 - The investigation workflow is a deterministic backend orchestration of configured evidence checks and model output; it is not an autonomous financial authority.
 

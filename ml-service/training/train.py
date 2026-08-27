@@ -151,6 +151,8 @@ def train_and_save_model():
     joblib.dump(model, model_path)
     joblib.dump(scaler, scaler_path)
     joblib.dump(metrics, metrics_path)
+    joblib.dump(X_test, os.path.join(save_dir, 'X_test.joblib'))
+    joblib.dump(y_test, os.path.join(save_dir, 'y_test.joblib'))
     
     print(f"[Training] Saved model to {model_path}")
     print(f"[Training] Results — Precision: {prec:.3f}, Recall: {rec:.3f}, F1: {f1:.3f}, ROC-AUC: {auc:.3f}")
