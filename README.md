@@ -107,8 +107,8 @@ False positives are particularly important in payment-risk systems because incor
 ### Rate (measured, held-out synthetic test set)
 
 - False Positives (FP): 2
-- True Negatives (TN): 1,736
-- False Positive Rate (FPR): ~0.115%
+- True Negatives (TN): 1,721
+- False Positive Rate (FPR): ~0.116%
 
 ### Translating rate into cost (estimated, assumptions stated)
 
@@ -233,7 +233,7 @@ At the model's default 0.50 threshold, the generated analysis reports precision 
 
 ### Synthetic Data & Why Metrics Look Strong
 
-The reported precision (99.3%), recall (98.9%), and ROC-AUC (0.9998) are
+The reported precision (99.3%), recall (98.9%), and ROC-AUC (0.9999) are
 notably high, and that is worth addressing directly rather than letting
 it stand unexplained.
 
